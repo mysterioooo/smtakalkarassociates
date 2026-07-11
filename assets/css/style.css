@@ -477,7 +477,11 @@ ul{
     color:#fff;
     box-shadow:0 18px 38px rgba(0,0,0,.16);
 }
-
+.trust-pill:hover{
+    transform:translateY(-8px);
+    background:rgba(255,255,255,.18);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
 .trust-pill strong{
     display:block;
     color:var(--accent);
