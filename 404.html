@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 Page Not Found | S M Takalkar & Associates</title>
+    <meta name="description" content="The page you are looking for does not exist. Return to S M Takalkar & Associates homepage.">
+    <meta name="author" content="S M Takalkar & Associates">
+
+    <link rel="icon" href="assets/images/logo/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        :root {
+            --primary: #0a2342;
+            --accent: #2554d8;
+            --heading: #111827;
+            --text: #4b5563;
+        }
+
+        /* 404 Section Styles */
+        .error-wrapper {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: #fdfdfd;
+            padding: 120px 0 80px;
+        }
+
+        /* Abstract Background Orbs */
+        .shape-orb {
+            position: absolute;
+            filter: blur(80px);
+            z-index: 1;
+            border-radius: 50%;
+            animation: floatShape 12s infinite alternate ease-in-out;
+            opacity: 0.6;
+        }
+
+        .shape-orb.orb-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(37, 84, 216, 0.15); /* Accent color */
+            top: -10%;
+            left: -10%;
+        }
+
+        .shape-orb.orb-2 {
+            width: 500px;
+            height: 500px;
+            background: rgba(10, 35, 66, 0.1); /* Primary color */
+            bottom: -20%;
+            right: -10%;
+            animation-delay: -6s;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes floatShape {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 30px) scale(1.1); }
+            100% { transform: translate(-30px, 50px) scale(0.9); }
+        }
+
+        /* Content Z-Index */
+        .error-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Animated 404 Code */
+        .error-code {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(6rem, 15vw, 12rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 10px;
+            display: inline-flex;
+            gap: 5px;
+        }
+
+        .error-code span {
+            display: inline-block;
+            background: linear-gradient(270deg, var(--primary), var(--accent), var(--primary));
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradientText 4s linear infinite, floatDigit 5s ease-in-out infinite;
+            text-shadow: 0px 15px 25px rgba(37, 84, 216, 0.1);
+        }
+
+        /* Offset animations for individual digits */
+        .error-code span:nth-child(1) {
+            animation-delay: 0s, 0s;
+        }
+        .error-code span:nth-child(2) {
+            animation-delay: 0s, -1.5s;
+        }
+        .error-code span:nth-child(3) {
+            animation-delay: 0s, -3s;
+        }
+
+        @keyframes gradientText {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes floatDigit {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        .error-content h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: var(--heading);
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .error-content p {
+            font-size: 1.1rem;
+            color: var(--text);
+            max-width: 550px;
+            margin: 0 auto 35px;
+            line-height: 1.8;
+        }
+
+        .btn-error {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 25px rgba(37, 84, 216, 0.25);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-error::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            z-index: -1;
+            transition: opacity 0.4s ease;
+            opacity: 0;
+        }
+
+        .btn-error:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(37, 84, 216, 0.4);
+            color: #fff;
+        }
+
+        .btn-error:hover::before {
+            opacity: 1;
+        }
+
+        .btn-error i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-error:hover i {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="logo" href="index.html">SM<span>.</span>TAKALKAR</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="services.html" >Services</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <button type="button" class="btn-consult border-0" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Consultation</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 404 Section -->
+    <section class="error-wrapper">
+        <div class="shape-orb orb-1"></div>
+        <div class="shape-orb orb-2"></div>
+
+        <div class="container error-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    
+                    <div class="error-code" data-aos="zoom-in" data-aos-duration="1000">
+                        <span>4</span>
+                        <span>0</span>
+                        <span>4</span>
+                    </div>
+                    
+                    <h1 data-aos="fade-up" data-aos-delay="200">Page Not Found</h1>
+                    
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        Oops! The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. 
+                        Let's get you back on track to your financial goals.
+                    </p>
+
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <a href="index.html" class="btn-error">
+                            Return to Homepage <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="footer-logo">SM<span>.</span>TAKALKAR</h3>
+                    <p class="footer-text">
+                        S M Takalkar & Associates is a trusted Chartered Accountancy firm providing Audit,
+                        Taxation, Accounting, GST, Financial Advisory and Business Consulting services with professionalism and integrity.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/taxation.html">Taxation</a></li>
+                        <li><a href="services/audit.html">Audit</a></li>
+                        <li><a href="services/accounting.html">Accounting</a></li>
+                        <li><a href="services/advisory.html">Financial Advisory</a></li>
+                        <li><a href="services/consulting.html">Business Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +91 8007237370</li>
+                        <li><i class="fa-solid fa-envelope"></i> casumittakalkar@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Bhosari, Pune</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="copyright d-flex justify-content-between flex-wrap gap-3 align-items-center">
+                <p class="mb-0">© 2026 S M Takalkar & Associates. All Rights Reserved.</p>
+                <div>
+                    <a href="privacy-policy.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="terms.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Terms & Conditions</a>
+                    <a href="disclaimer.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Disclaimer</a>
+                    <a href="sitemap.html" class="text-white text-decoration-none" style="font-size: 0.9rem;">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Initialize AOS inline in case it's not handled in main.js -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 50,
+                });
+            }
+        });
+    </script>
+<!-- Enhanced Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content border-0 rounded-4 shadow-xl overflow-hidden">
+            <div class="row g-0">
+                
+                <!-- Left Info Panel (Hidden on Small Mobile) -->
+                <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-between p-5 text-white position-relative" style="background: linear-gradient(145deg, #0a2342, #163660);">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: radial-gradient(circle at 20% 20%, #2554d8 0%, transparent 80%); pointer-events: none;"></div>
+                    
+                    <div class="position-relative z-1">
+                        <span class="text-uppercase tracking-wider fw-bold text-accent small d-block mb-2" style="color: #cbd5e1; letter-spacing: 1.5px;">S M Takalkar & Associates</span>
+                        <h3 class="fw-bold lh-base mb-4">Let's Secure Your Financial Strategy</h3>
+                        <p class="text-white-50 font-medium">Partner with expert Chartered Accountants to streamline your taxation, corporate compliance, and advisory goals.</p>
+                    </div>
+
+                    <div class="position-relative z-1 my-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-clock text-warning"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Response Window</small>
+                                <span class="fw-semibold">Within 24 Business Hours</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-shield-halved text-success"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Data Security</small>
+                                <span class="fw-semibold">100% Secure & Confidential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="position-relative z-1 pt-3 border-top border-white border-opacity-10">
+                        <small class="text-white-50 d-block">Direct Office Support</small>
+                        <a href="tel:+918007237370" class="text-white text-decoration-none fw-bold fs-5">+91 80072 37370</a>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel -->
+                <div class="col-lg-8 bg-white p-4 p-md-5 position-relative">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-1" id="consultationModalLabel">
+                                <i class="fa-solid fa-calendar-check me-2 text-primary d-lg-none"></i>Book Consultation
+                            </h4>
+                            <p class="text-muted small mb-0">Provide details below to setup an appointment with our corporate team.</p>
+                        </div>
+                        <button type="button" class="btn-close p-2 custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form action="contact.php" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control premium-input" placeholder="e.g., Rajesh Kumar" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control premium-input" placeholder="e.g., name@company.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" name="phone" class="form-control premium-input" placeholder="10-digit mobile number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Company Name</label>
+                                <input type="text" name="company" class="form-control premium-input" placeholder="Registered business name (Optional)">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Practice Area / Service Required <span class="text-danger">*</span></label>
+                                <select name="service" class="form-select premium-input" required>
+                                    <option value="" selected disabled>Choose a service area...</option>
+                                    <option value="taxation">Taxation & GST Compliance</option>
+                                    <option value="audit">Audit & Assurance</option>
+                                    <option value="accounting">Corporate Accounting Services</option>
+                                    <option value="advisory">Financial Advisory & Planning</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="registration">Company / Firm Registration</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Brief Briefing of Requirements <span class="text-danger">*</span></label>
+                                <textarea name="message" class="form-control premium-input" rows="4" placeholder="Describe the current scope or financial challenges your organization is facing..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4 pt-2">
+                                <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold shadow-md premium-btn-submit">
+                                    Request Appointment <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

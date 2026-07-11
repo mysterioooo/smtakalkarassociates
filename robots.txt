@@ -1,0 +1,11 @@
+# S M Takalkar & Associates - SEO Crawl Rules
+User-agent: *
+Allow: /
+
+# Directories to exclude from indexing (if applicable in future updates)
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/images/logo/favicon.ico
+
+# Link to your XML Sitemap
+Sitemap: https://smtakalkarassociates.com/sitemap.xml

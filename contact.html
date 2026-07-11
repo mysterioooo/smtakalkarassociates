@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | S M Takalkar & Associates</title>
+    <meta name="description" content="Get in touch with S M Takalkar & Associates, Chartered Accountants in Bhosari, Pune for Taxation, Audit, Accounting, and Advisory services.">
+    <meta name="keywords" content="Contact CA Sumit Takalkar, Pune CA office, CA firm in Bhosari, contact chartered accountant, tax consultant contact">
+    <meta name="author" content="S M Takalkar & Associates">
+
+    <meta property="og:title" content="Contact Us | S M Takalkar & Associates">
+    <meta property="og:description" content="Reach out to S M Takalkar & Associates for professional CA services in Pune.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smtakalkarassociates.com/contact.html">
+
+    <link rel="icon" href="assets/images/logo/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .page-hero {
+            position: relative;
+            min-height: 58vh;
+            display: flex;
+            align-items: center;
+            padding: 160px 0 90px;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(10, 35, 66, 0.92), rgba(37, 84, 216, 0.82)),
+                url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+
+        .page-hero .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .breadcrumb-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .breadcrumb-custom a {
+            color: #fff;
+            opacity: 0.9;
+            text-decoration: none;
+        }
+
+        .breadcrumb-custom span {
+            color: var(--accent);
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4.8rem);
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-hero p {
+            max-width: 760px;
+            color: #e5e7eb;
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+        }
+
+        /* Inquiry Cards */
+        .inquiry-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .inquiry-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(10, 35, 66, 0.1);
+        }
+
+        .inquiry-icon {
+            width: 74px;
+            height: 74px;
+            background: rgba(37, 84, 216, 0.05);
+            color: var(--primary);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 24px;
+            transition: var(--transition);
+        }
+
+        .inquiry-card:hover .inquiry-icon {
+            background: var(--primary);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .inquiry-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .inquiry-card p, .inquiry-card a {
+            color: #555;
+            font-size: 1rem;
+            margin: 0;
+            text-decoration: none;
+            display: block;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .inquiry-card a:hover {
+            color: var(--primary);
+        }
+
+        /* Animated Background Section */
+        .animated-contact-wrapper {
+            position: relative;
+            overflow: hidden;
+            background: #fdfdfd;
+            padding: 100px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: 0;
+            animation: floatBlob 12s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            top: -10%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+        }
+
+        .blob-2 {
+            bottom: -10%;
+            right: -5%;
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            animation-delay: -6s;
+        }
+
+        @keyframes floatBlob {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, 40px) scale(1.1); }
+        }
+
+        .contact-content-relative {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Contact Form */
+        .premium-form-box {
+            background: #fff;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border);
+            height: 100%;
+        }
+
+        .premium-form-box h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .form-control, .form-select {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--heading);
+            background: #fafafa;
+            transition: var(--transition);
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: #fff;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 84, 216, 0.1);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--heading);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* Office Details Box */
+        .office-details-box {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 24px;
+            padding: 48px;
+            color: #fff;
+            height: 100%;
+            box-shadow: 0 20px 40px rgba(10, 35, 66, 0.15);
+        }
+
+        .office-details-box h3 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .contact-info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-info-list .info-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .contact-info-list .info-text h5 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .contact-info-list .info-text p,
+        .contact-info-list .info-text a {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        .contact-info-list .info-text a:hover {
+            color: var(--accent);
+        }
+
+        .social-links-premium {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-links-premium a {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 12px;
+            font-size: 18px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-links-premium a:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Map Section */
+        .map-wrapper {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            line-height: 0;
+            border: 1px solid var(--border);
+        }
+
+        @media (max-width: 991px) {
+            .page-hero { min-height: auto; padding: 140px 0 80px; }
+            .premium-form-box, .office-details-box { padding: 32px; }
+        }
+
+        @media (max-width: 767px) {
+            .page-hero { padding: 130px 0 70px; }
+            .page-hero p { font-size: 1rem; }
+            .animated-contact-wrapper { padding: 60px 0; }
+        }
+    </style>
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "S M Takalkar & Associates",
+      "image": "https://smtakalkarassociates.com/assets/images/logo/favicon.ico",
+      "@id": "https://smtakalkarassociates.com/#website",
+      "url": "https://smtakalkarassociates.com/index.html",
+      "telephone": "+918007237370",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Flat No 104, Pandurang Residency, Sector No-1, Indrayaninagar, Bhosari",
+        "addressLocality": "Pune",
+        "addressRegion": "MH",
+        "postalCode": "411039",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.636979,
+        "longitude": 73.842263
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/#",
+        "https://www.linkedin.com/#",
+        "https://www.instagram.com/#"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div class="scroll-progress"></div>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="logo" href="index.html">SM<span>.</span>TAKALKAR</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="services.html" >Services</a>
+                            <!-- <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="services/taxation.html">Taxation</a></li>
+                                <li><a class="dropdown-item" href="services/audit.html">Audit</a></li>
+                                <li><a class="dropdown-item" href="services/accounting.html">Accounting</a></li>
+                                <li><a class="dropdown-item" href="services/advisory.html">Financial Advisory</a></li>
+                                <li><a class="dropdown-item" href="services/consulting.html">Business Consulting</a></li>
+                                <li><a class="dropdown-item" href="services/registration.html">Company Registration</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        <li class="nav-item ms-lg-3">
+                        <button type="button" class="btn-consult border-0" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Consultation</button>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="breadcrumb-custom" data-aos="fade-up">
+                        <a href="index.html">Home</a>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                        <span>Contact Us</span>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="section-subtitle text-white">REACH OUT</h6>
+                        <h1>Let's Discuss Your Financial Goals</h1>
+                        <p>
+                            Whether you need assistance with taxation, audit compliance, or business advisory, our dedicated team is here to provide clarity and solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Inquiry Cards -->
+    <section class="section pb-0">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="inquiry-card">
+                        <div class="inquiry-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <h4>Call Us Directly</h4>
+                        <p>Speak with our support team to get quick answers.</p>
+                        <a href="tel:+918007237370" class="mt-2 fw-bold text-primary">+91 80072 37370</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="inquiry-card">
+                        <div class="inquiry-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <h4>Chat on WhatsApp</h4>
+                        <p>Send us your documents or queries instantly via WhatsApp.</p>
+                        <a href="https://wa.me/918007237370" target="_blank" class="mt-2 fw-bold text-primary">Message Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="inquiry-card">
+                        <div class="inquiry-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <h4>Email Your Inquiry</h4>
+                        <p>For detailed proposals, business plans, or audit requests.</p>
+                        <a href="mailto:casumittakalkar@gmail.com" class="mt-2 fw-bold text-primary">casumittakalkar@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section with Animated BG -->
+    <section class="animated-contact-wrapper mt-5">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        
+        <div class="container contact-content-relative">
+            <div class="row g-5">
+                <!-- Form Column -->
+                <div class="col-lg-7" data-aos="fade-right">
+                   <!-- Form Box with updated action, id, and input names -->
+                    <div class="premium-form-box" id="contact-form">
+                        <h3>Send us a Message</h3>
+                        
+                        <!-- Status Alerts based on PHP redirect parameters -->
+                        <script>
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const status = urlParams.get('status');
+                            if (status === 'success') {
+                                document.write('<div class="alert alert-success border-0 rounded-3 mb-4" role="alert"><i class="fa-solid fa-circle-check me-2"></i> Thank you! Your inquiry has been sent successfully.</div>');
+                            } else if (status === 'error' || status === 'server-error') {
+                                document.write('<div class="alert alert-danger border-0 rounded-3 mb-4" role="alert"><i class="fa-solid fa-circle-exclamation me-2"></i> Oops! Something went wrong. Please check your fields and try again.</div>');
+                            } else if (status === 'invalid-email') {
+                                document.write('<div class="alert alert-warning border-0 rounded-3 mb-4" role="alert"><i class="fa-solid fa-triangle-exclamation me-2"></i> Please provide a valid email address.</div>');
+                            }
+                        </script>
+
+                        <form action="contact.php" method="POST">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <!-- Added name="name" -->
+                                    <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address</label>
+                                    <!-- Added name="email" -->
+                                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <!-- Added name="phone" -->
+                                    <input type="tel" name="phone" class="form-control" placeholder="Enter phone number" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Service Required</label>
+                                    <!-- Added name="service" -->
+                                    <select name="service" class="form-select">
+                                        <option value="" selected disabled>Select a service</option>
+                                        <option value="taxation">Taxation & GST</option>
+                                        <option value="audit">Audit & Assurance</option>
+                                        <option value="accounting">Accounting Services</option>
+                                        <option value="advisory">Financial Advisory</option>
+                                        <option value="registration">Firm Registration</option>
+                                        <option value="other">Other Inquiry</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Your Message</label>
+                                    <!-- Added name="message" -->
+                                    <textarea name="message" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn-primary-custom w-100 justify-content-center">
+                                        Submit Inquiry <i class="fa-solid fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Office Details Column -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="office-details-box">
+                        <h3>Office Details</h3>
+                        <ul class="contact-info-list">
+                            <li>
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="info-text">
+                                    <h5>Visit Us</h5>
+                                    <p>Flat No 104, Pandurang Residency, Sector No-1, Indrayaninagar, Bhosari, Pune. Pin Code - 411039</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="info-text">
+                                    <h5>Call Us</h5>
+                                    <a href="tel:+918007237370">+91 80072 37370</a><br>
+                                    <a href="tel:+919028523827">+91 90285 23827</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="info-text">
+                                    <h5>Email Us</h5>
+                                    <a href="mailto:casumittakalkar@gmail.com">casumittakalkar@gmail.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="info-text">
+                                    <h5>Working Hours</h5>
+                                    <p>Monday - Saturday<br>10:00 AM - 7:00 PM</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0;">
+                        
+                        <h5 class="text-white mb-3">Connect With Us</h5>
+                        <div class="social-links-premium">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="section pt-0">
+        <div class="container" data-aos="fade-up">
+            <div class="map-wrapper">
+                <!-- Embedded Map for Bhosari, Pune -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.5944848132626!2d73.84169828479575!3d18.637300620438165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c7e97d72c673%3A0x1c4c50d6580a8556!2sS%20M%20Takalkar%20%26%20Associates%20CA!5e0!3m2!1sen!2sin!4v1783710025351!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="footer-logo">SM<span>.</span>TAKALKAR</h3>
+                    <p class="footer-text">
+                        S M Takalkar & Associates is a trusted Chartered Accountancy firm providing Audit,
+                        Taxation, Accounting, GST, Financial Advisory and Business Consulting services with professionalism and integrity.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/taxation.html">Taxation</a></li>
+                        <li><a href="services/audit.html">Audit</a></li>
+                        <li><a href="services/accounting.html">Accounting</a></li>
+                        <li><a href="services/advisory.html">Financial Advisory</a></li>
+                        <li><a href="services/consulting.html">Business Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +91 8007237370</li>
+                        <li><i class="fa-solid fa-envelope"></i> casumittakalkar@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Bhosari, Pune</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+             <div class="copyright d-flex justify-content-between flex-wrap gap-3 align-items-center">
+                <p class="mb-0">© 2026 S M Takalkar & Associates. All Rights Reserved.</p>
+                <div>
+                    <a href="privacy-policy.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="terms.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Terms & Conditions</a>
+                    <a href="disclaimer.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Disclaimer</a>
+                    <a href="sitemap.html" class="text-white text-decoration-none" style="font-size: 0.9rem;">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <a href="https://wa.me/918007237370" class="whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Initialize AOS inline in case it's not handled in main.js -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 50,
+                });
+            }
+        });
+    </script>
+    <!-- Enhanced Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content border-0 rounded-4 shadow-xl overflow-hidden">
+            <div class="row g-0">
+                
+                <!-- Left Info Panel (Hidden on Small Mobile) -->
+                <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-between p-5 text-white position-relative" style="background: linear-gradient(145deg, #0a2342, #163660);">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: radial-gradient(circle at 20% 20%, #2554d8 0%, transparent 80%); pointer-events: none;"></div>
+                    
+                    <div class="position-relative z-1">
+                        <span class="text-uppercase tracking-wider fw-bold text-accent small d-block mb-2" style="color: #cbd5e1; letter-spacing: 1.5px;">S M Takalkar & Associates</span>
+                        <h3 class="fw-bold lh-base mb-4">Let's Secure Your Financial Strategy</h3>
+                        <p class="text-white-50 font-medium">Partner with expert Chartered Accountants to streamline your taxation, corporate compliance, and advisory goals.</p>
+                    </div>
+
+                    <div class="position-relative z-1 my-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-clock text-warning"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Response Window</small>
+                                <span class="fw-semibold">Within 24 Business Hours</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-shield-halved text-success"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Data Security</small>
+                                <span class="fw-semibold">100% Secure & Confidential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="position-relative z-1 pt-3 border-top border-white border-opacity-10">
+                        <small class="text-white-50 d-block">Direct Office Support</small>
+                        <a href="tel:+918007237370" class="text-white text-decoration-none fw-bold fs-5">+91 80072 37370</a>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel -->
+                <div class="col-lg-8 bg-white p-4 p-md-5 position-relative">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-1" id="consultationModalLabel">
+                                <i class="fa-solid fa-calendar-check me-2 text-primary d-lg-none"></i>Book Consultation
+                            </h4>
+                            <p class="text-muted small mb-0">Provide details below to setup an appointment with our corporate team.</p>
+                        </div>
+                        <button type="button" class="btn-close p-2 custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form action="contact.php" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control premium-input" placeholder="e.g., Rajesh Kumar" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control premium-input" placeholder="e.g., name@company.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" name="phone" class="form-control premium-input" placeholder="10-digit mobile number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Company Name</label>
+                                <input type="text" name="company" class="form-control premium-input" placeholder="Registered business name (Optional)">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Practice Area / Service Required <span class="text-danger">*</span></label>
+                                <select name="service" class="form-select premium-input" required>
+                                    <option value="" selected disabled>Choose a service area...</option>
+                                    <option value="taxation">Taxation & GST Compliance</option>
+                                    <option value="audit">Audit & Assurance</option>
+                                    <option value="accounting">Corporate Accounting Services</option>
+                                    <option value="advisory">Financial Advisory & Planning</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="registration">Company / Firm Registration</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Brief Briefing of Requirements <span class="text-danger">*</span></label>
+                                <textarea name="message" class="form-control premium-input" rows="4" placeholder="Describe the current scope or financial challenges your organization is facing..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4 pt-2">
+                                <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold shadow-md premium-btn-submit">
+                                    Request Appointment <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

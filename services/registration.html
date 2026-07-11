@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Company Registration Services | S M Takalkar & Associates</title>
+    <meta name="description" content="Company registration services by S M Takalkar & Associates in Pune including private limited company incorporation, LLP, partnership setup, ROC compliance and business registrations.">
+    <meta name="keywords" content="Company Registration Pune, Private Limited Company, LLP Registration, Partnership Firm, ROC Compliance, Business Registration">
+    <meta name="author" content="S M Takalkar & Associates">
+
+    <meta property="og:title" content="Company Registration Services | S M Takalkar & Associates">
+    <meta property="og:description" content="Professional company registration services in Pune covering private limited incorporation, LLP, partnership setup and ROC compliance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smtakalkarassociates.com/services/registration.html">
+
+    <link rel="icon" href="../assets/images/logo/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .page-hero {
+            position: relative;
+            min-height: 58vh;
+            display: flex;
+            align-items: center;
+            padding: 160px 0 90px;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(10, 35, 66, 0.92), rgba(37, 84, 216, 0.82)),
+                url('https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+
+        .page-hero .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .breadcrumb-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .breadcrumb-custom a {
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .breadcrumb-custom span {
+            color: var(--accent);
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4.8rem);
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-hero p {
+            max-width: 760px;
+            color: #e5e7eb;
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+        }
+
+        .reg-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .reg-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .reg-card .icon-box {
+            width: 74px;
+            height: 74px;
+            font-size: 26px;
+            border-radius: 18px;
+            margin-bottom: 18px;
+        }
+
+        .reg-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .reg-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--heading);
+            font-weight: 600;
+        }
+
+        .reg-list i {
+            color: var(--accent);
+            margin-top: 4px;
+            min-width: 18px;
+        }
+
+        .reg-process-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .reg-process-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .reg-process-number {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .reg-highlight-band {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border-radius: 28px;
+            padding: 44px 24px;
+            box-shadow: 0 25px 60px rgba(0,0,0,.16);
+        }
+
+        .reg-highlight-item h3 {
+            color: var(--accent);
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+        }
+
+        .reg-highlight-item p {
+            color: rgba(255,255,255,.9);
+            font-size: 1rem;
+        }
+
+        .faq-note {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow-sm);
+            padding: 28px;
+        }
+
+        @media (max-width: 991px) {
+            .page-hero {
+                min-height: auto;
+                padding: 140px 0 80px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .page-hero {
+                padding: 130px 0 70px;
+            }
+
+            .page-hero p {
+                font-size: 1rem;
+            }
+
+            .reg-card,
+            .reg-process-card {
+                padding: 28px;
+            }
+
+            .reg-highlight-item h3 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-progress"></div>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="logo" href="../index.html">SM<span>.</span>TAKALKAR</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link" href="services.html" >Services</a>
+                            <!-- <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="taxation.html">Taxation</a></li>
+                                <li><a class="dropdown-item" href="audit.html">Audit</a></li>
+                                <li><a class="dropdown-item" href="accounting.html">Accounting</a></li>
+                                <li><a class="dropdown-item" href="advisory.html">Financial Advisory</a></li>
+                                <li><a class="dropdown-item" href="consulting.html">Business Consulting</a></li>
+                                <li><a class="dropdown-item" href="registration.html">Company Registration</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../industries.html">Industries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blog.html">Insights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+    <button type="button" class="btn-consult border-0" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Consultation</button>
+</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="breadcrumb-custom" data-aos="fade-up">
+                        <a href="../index.html">Home</a>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                        <a href="../services.html">Services</a>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                        <span>Company Registration</span>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="section-subtitle text-white">COMPANY REGISTRATION</h6>
+                        <h1>Registration Support That Helps You Start Right</h1>
+                        <p>
+                            We assist with business setup, incorporation and statutory registrations so you can start
+                            with the right structure and a clear compliance foundation.
+                        </p>
+                        <a href="../contact.html" class="btn-primary-custom">Talk to an Expert <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Overview</span>
+                <h2>Registration services designed for a smooth business start</h2>
+                <p>
+                    From incorporation to compliance setup, we help businesses establish the right legal and
+                    operational foundation.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="reg-card" data-aos="fade-up">
+                        <div class="icon-box"><i class="fa-solid fa-building"></i></div>
+                        <h4>Private Limited Company</h4>
+                        <p>Support for incorporating a private limited company with the required setup steps.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="reg-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                        <h4>LLP Registration</h4>
+                        <p>Guidance and support for Limited Liability Partnership formation and setup.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="reg-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"><i class="fa-solid fa-people-group"></i></div>
+                        <h4>Partnership Firm</h4>
+                        <p>Setup assistance for partnership businesses and related documentation.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="reg-card" data-aos="fade-up">
+                        <div class="icon-box"><i class="fa-solid fa-file-signature"></i></div>
+                        <h4>ROC Compliance</h4>
+                        <p>Registration and compliance support for statutory company filings and requirements.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="reg-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"><i class="fa-solid fa-id-card"></i></div>
+                        <h4>Statutory Registrations</h4>
+                        <p>Support for essential business registrations and associated compliance formalities.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="reg-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <h4>Compliance Setup</h4>
+                        <p>Helping you set up the basic compliance structure needed to operate smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="section-heading">
+                <span>What We Handle</span>
+                <h2>Registration support for new businesses and growing enterprises</h2>
+                <p>We guide clients through setup, paperwork and statutory follow-through with clarity.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="reg-card" data-aos="fade-right">
+                        <h4>Registration Scope</h4>
+                        <p>
+                            Our registration support includes private limited company incorporation, LLP formation,
+                            partnership setup, ROC compliance, business registrations and connected documentation
+                            required to begin operations.
+                        </p>
+
+                        <ul class="reg-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Private limited company incorporation</li>
+                            <li><i class="fa-solid fa-circle-check"></i> LLP registration and setup</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Partnership firm formation</li>
+                            <li><i class="fa-solid fa-circle-check"></i> ROC compliance support</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Required statutory registrations</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Compliance-oriented setup guidance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-section-block service-big-card" data-aos="fade-left">
+                        <div class="block-body">
+                            <h4>Why this matters</h4>
+                            <p>
+                                Starting with the right structure saves time later. Good registration support helps
+                                businesses avoid delays, keep compliance on track and move ahead with confidence.
+                            </p>
+
+                            <div class="row g-3 mt-2">
+                                <div class="col-sm-6">
+                                    <div class="card-ui">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-box" style="width:64px;height:64px;font-size:22px;"><i class="fa-solid fa-clock"></i></div>
+                                            <div>
+                                                <h5 class="mb-1">Faster setup</h5>
+                                                <small class="text-secondary">Structured onboarding</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card-ui">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-box" style="width:64px;height:64px;font-size:22px;"><i class="fa-solid fa-shield-halved"></i></div>
+                                            <div>
+                                                <h5 class="mb-1">Compliance ready</h5>
+                                                <small class="text-secondary">Right from the start</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card-ui">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-box" style="width:64px;height:64px;font-size:22px;"><i class="fa-solid fa-lightbulb"></i></div>
+                                            <div>
+                                                <h5 class="mb-1">Clear guidance</h5>
+                                                <small class="text-secondary">Step-by-step support</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card-ui">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="icon-box" style="width:64px;height:64px;font-size:22px;"><i class="fa-solid fa-users"></i></div>
+                                            <div>
+                                                <h5 class="mb-1">Support team</h5>
+                                                <small class="text-secondary">Responsive assistance</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="../contact.html" class="btn-primary-custom mt-4">Discuss Your Registration Need <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section about-section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Our Process</span>
+                <h2>Simple, guided and efficient registration support</h2>
+                <p>We keep the process easy so you can focus on starting your business.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="reg-process-card" data-aos="fade-up">
+                        <div class="reg-process-number">01</div>
+                        <h4>Consult</h4>
+                        <p>We understand the business type, structure and registration requirement.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="reg-process-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="reg-process-number">02</div>
+                        <h4>Prepare</h4>
+                        <p>We identify the documents, steps and filings required for setup.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="reg-process-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="reg-process-number">03</div>
+                        <h4>Submit</h4>
+                        <p>We support the preparation and submission of the required forms and records.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="reg-process-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="reg-process-number">04</div>
+                        <h4>Complete</h4>
+                        <p>We guide the follow-up process until the registration is completed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Context -->
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Who We Serve</span>
+                <h2>Registration support for businesses at different stages</h2>
+                <p>We support founders, owners and growing entities looking to establish the right structure.</p>
+            </div>
+
+            <div class="reg-highlight-band">
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="reg-highlight-item" data-aos="zoom-in">
+                            <h3>Startups</h3>
+                            <p>Fresh business setup and incorporation</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="reg-highlight-item" data-aos="zoom-in" data-aos-delay="100">
+                            <h3>SMEs</h3>
+                            <p>Business structuring and compliance setup</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="reg-highlight-item" data-aos="zoom-in" data-aos-delay="200">
+                            <h3>Growing Firms</h3>
+                            <p>Registration changes and ROC support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-heading">
+                <span>FAQ</span>
+                <h2>Common questions about registration services</h2>
+                <p>Helpful answers before you start your business registration process.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion premium-accordion" id="regFaq">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#regFaq1">
+                                    Can you help with private limited company incorporation?
+                                </button>
+                            </h2>
+                            <div id="regFaq1" class="accordion-collapse collapse show" data-bs-parent="#regFaq">
+                                <div class="accordion-body">
+                                    Yes. We can assist with private limited company incorporation and related setup steps.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#regFaq2">
+                                    Do you handle LLP and partnership registration too?
+                                </button>
+                            </h2>
+                            <div id="regFaq2" class="accordion-collapse collapse" data-bs-parent="#regFaq">
+                                <div class="accordion-body">
+                                    Yes. LLP and partnership setup support is included in our registration services.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#regFaq3">
+                                    Do you support ROC compliance after registration?
+                                </button>
+                            </h2>
+                            <div id="regFaq3" class="accordion-collapse collapse" data-bs-parent="#regFaq">
+                                <div class="accordion-body">
+                                    Yes. We can support ROC compliance and other ongoing registration-related obligations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-note mt-4" data-aos="fade-up">
+                        <strong>Need to register your business?</strong>
+                        <p class="mt-2 mb-0">
+                            Send us your setup requirement and we will guide you on the right registration path.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+
+    <div class="container-fluid px-5">
+
+        <div class="cta-box">
+
+            <div class="cta-content">
+                    <h2>
+                        Ready to Register Your
+                        <br>
+                        Business the Right Way?
+                    </h2>
+                    <p>
+                        Connect with S M Takalkar & Associates for private limited company incorporation,
+                        LLP setup, partnership formation and ROC compliance support.
+                    </p>
+
+                    <div class="cta-features">
+                        <span><i class="fa-solid fa-circle-check"></i>Company Setup</span>
+                        <span><i class="fa-solid fa-circle-check"></i>LLP & Partnership</span>
+                        <span><i class="fa-solid fa-circle-check"></i>ROC Compliance</span>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <button type="button" class="cta-btn" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Consultation</button>
+                        <a href="tel:+918007237370" class="cta-btn-outline">Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="footer-logo">SM<span>.</span>TAKALKAR</h3>
+                    <p class="footer-text">
+                        S M Takalkar & Associates is a trusted Chartered Accountancy firm providing Audit,
+                        Taxation, Accounting, GST, Financial Advisory and Business Consulting services with professionalism and integrity.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../industries.html">Industries</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="taxation.html">Taxation</a></li>
+                        <li><a href="audit.html">Audit</a></li>
+                        <li><a href="accounting.html">Accounting</a></li>
+                        <li><a href="advisory.html">Financial Advisory</a></li>
+                        <li><a href="consulting.html">Business Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +91 8007237370</li>
+                        <li><i class="fa-solid fa-envelope"></i> casumittakalkar@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Bhosari, Pune</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+             <div class="copyright d-flex justify-content-between flex-wrap gap-3 align-items-center">
+                <p class="mb-0">© 2026 S M Takalkar & Associates. All Rights Reserved.</p>
+                <div>
+                    <a href="../privacy-policy.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="../terms.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Terms & Conditions</a>
+                    <a href="../disclaimer.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Disclaimer</a>
+                    <a href="../sitemap.html" class="text-white text-decoration-none" style="font-size: 0.9rem;">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <a href="https://wa.me/918007237370" class="whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Enhanced Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content border-0 rounded-4 shadow-xl overflow-hidden">
+            <div class="row g-0">
+                
+                <!-- Left Info Panel (Hidden on Small Mobile) -->
+                <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-between p-5 text-white position-relative" style="background: linear-gradient(145deg, #0a2342, #163660);">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: radial-gradient(circle at 20% 20%, #2554d8 0%, transparent 80%); pointer-events: none;"></div>
+                    
+                    <div class="position-relative z-1">
+                        <span class="text-uppercase tracking-wider fw-bold text-accent small d-block mb-2" style="color: #cbd5e1; letter-spacing: 1.5px;">S M Takalkar & Associates</span>
+                        <h3 class="fw-bold lh-base mb-4">Let's Secure Your Financial Strategy</h3>
+                        <p class="text-white-50 font-medium">Partner with expert Chartered Accountants to streamline your taxation, corporate compliance, and advisory goals.</p>
+                    </div>
+
+                    <div class="position-relative z-1 my-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-clock text-warning"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Response Window</small>
+                                <span class="fw-semibold">Within 24 Business Hours</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-shield-halved text-success"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Data Security</small>
+                                <span class="fw-semibold">100% Secure & Confidential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="position-relative z-1 pt-3 border-top border-white border-opacity-10">
+                        <small class="text-white-50 d-block">Direct Office Support</small>
+                        <a href="tel:+918007237370" class="text-white text-decoration-none fw-bold fs-5">+91 80072 37370</a>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel -->
+                <div class="col-lg-8 bg-white p-4 p-md-5 position-relative">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-1" id="consultationModalLabel">
+                                <i class="fa-solid fa-calendar-check me-2 text-primary d-lg-none"></i>Book Consultation
+                            </h4>
+                            <p class="text-muted small mb-0">Provide details below to setup an appointment with our corporate team.</p>
+                        </div>
+                        <button type="button" class="btn-close p-2 custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form action="contact.php" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control premium-input" placeholder="e.g., Rajesh Kumar" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control premium-input" placeholder="e.g., name@company.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" name="phone" class="form-control premium-input" placeholder="10-digit mobile number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Company Name</label>
+                                <input type="text" name="company" class="form-control premium-input" placeholder="Registered business name (Optional)">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Practice Area / Service Required <span class="text-danger">*</span></label>
+                                <select name="service" class="form-select premium-input" required>
+                                    <option value="" selected disabled>Choose a service area...</option>
+                                    <option value="taxation">Taxation & GST Compliance</option>
+                                    <option value="audit">Audit & Assurance</option>
+                                    <option value="accounting">Corporate Accounting Services</option>
+                                    <option value="advisory">Financial Advisory & Planning</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="registration">Company / Firm Registration</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Brief Briefing of Requirements <span class="text-danger">*</span></label>
+                                <textarea name="message" class="form-control premium-input" rows="4" placeholder="Describe the current scope or financial challenges your organization is facing..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4 pt-2">
+                                <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold shadow-md premium-btn-submit">
+                                    Request Appointment <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

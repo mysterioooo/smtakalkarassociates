@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Industries | S M Takalkar & Associates</title>
+    <meta name="description" content="Industries served by S M Takalkar & Associates in Pune including banking, insurance, co-operative societies, manufacturing, logistics, hospitality, retail, IT and education.">
+    <meta name="keywords" content="Industries Served Pune, Banking, Insurance, Co-operative Societies, Manufacturing, Logistics, Hospitality, Retail, IT, Education">
+    <meta name="author" content="S M Takalkar & Associates">
+
+    <meta property="og:title" content="Industries | S M Takalkar & Associates">
+    <meta property="og:description" content="Explore the industries served by S M Takalkar & Associates, including banking, insurance, manufacturing, IT, hospitality and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smtakalkarassociates.com/industries.html">
+
+    <link rel="icon" href="assets/images/logo/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .page-hero {
+            position: relative;
+            min-height: 58vh;
+            display: flex;
+            align-items: center;
+            padding: 160px 0 90px;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(10, 35, 66, 0.92), rgba(37, 84, 216, 0.82)),
+                url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+
+        .page-hero .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .breadcrumb-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .breadcrumb-custom a {
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .breadcrumb-custom span {
+            color: var(--accent);
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4.8rem);
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-hero p {
+            max-width: 760px;
+            color: #e5e7eb;
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+        }
+
+        .industry-card-page {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .industry-card-page:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .industry-card-page .icon-box {
+            width: 74px;
+            height: 74px;
+            font-size: 26px;
+            border-radius: 18px;
+            margin-bottom: 18px;
+        }
+
+        .industry-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .industry-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--heading);
+            font-weight: 600;
+        }
+
+        .industry-list i {
+            color: var(--accent);
+            margin-top: 4px;
+            min-width: 18px;
+        }
+
+        .industry-process-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .industry-process-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .industry-process-number {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .industry-highlight-band {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border-radius: 28px;
+            padding: 44px 24px;
+            box-shadow: 0 25px 60px rgba(0,0,0,.16);
+        }
+
+        .industry-highlight-item h3 {
+            color: var(--accent);
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+        }
+
+        .industry-highlight-item p {
+            color: rgba(255,255,255,.9);
+            font-size: 1rem;
+        }
+
+        .faq-note {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow-sm);
+            padding: 28px;
+        }
+
+        @media (max-width: 991px) {
+            .page-hero {
+                min-height: auto;
+                padding: 140px 0 80px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .page-hero {
+                padding: 130px 0 70px;
+            }
+
+            .page-hero p {
+                font-size: 1rem;
+            }
+
+            .industry-card-page,
+            .industry-process-card {
+                padding: 28px;
+            }
+
+            .industry-highlight-item h3 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scroll-progress"></div>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="logo" href="index.html">SM<span>.</span>TAKALKAR</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="services.html" >Services</a>
+                            <!-- <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="services/taxation.html">Taxation</a></li>
+                                <li><a class="dropdown-item" href="services/audit.html">Audit</a></li>
+                                <li><a class="dropdown-item" href="services/accounting.html">Accounting</a></li>
+                                <li><a class="dropdown-item" href="services/advisory.html">Financial Advisory</a></li>
+                                <li><a class="dropdown-item" href="services/consulting.html">Business Consulting</a></li>
+                                <li><a class="dropdown-item" href="services/registration.html">Company Registration</a></li>
+                            </ul> -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="industries.html">Industries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Insights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                       <li class="nav-item ms-lg-3">
+    <button type="button" class="btn-consult border-0" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Consultation</button>
+</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="overlay"></div>
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="breadcrumb-custom" data-aos="fade-up">
+                        <a href="index.html">Home</a>
+                        <span><i class="fa-solid fa-angle-right"></i></span>
+                        <span>Industries</span>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="section-subtitle text-white">INDUSTRIES WE SERVE</h6>
+                        <h1>Expertise Across Diverse Business Sectors</h1>
+                        <p>
+                            Our work spans across multiple sectors, helping organizations manage compliance,
+                            reporting, taxation and advisory requirements with practical support.
+                        </p>
+                        <a href="contact.html" class="btn-primary-custom">Talk to an Expert <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Core Sectors</span>
+                <h2>Industries where we bring practical experience and support</h2>
+                <p>Our services are shaped by industry needs, regulatory requirements and business realities.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up">
+                        <div class="icon-box"><i class="fa-solid fa-building-columns"></i></div>
+                        <h4>Banking</h4>
+                        <p>Branch audit, compliance, reporting and financial support for banking organizations.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4>Insurance</h4>
+                        <p>Financial control, audit, reporting and operational support for insurance entities.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"><i class="fa-solid fa-users"></i></div>
+                        <h4>Co-operative Societies</h4>
+                        <p>Specialized audit and compliance support backed by practical sector experience.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up">
+                        <div class="icon-box"><i class="fa-solid fa-industry"></i></div>
+                        <h4>Manufacturing</h4>
+                        <p>Tax, accounting and audit support for manufacturing and production businesses.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+                        <h4>Logistics</h4>
+                        <p>Support for businesses managing supply chains, operations and reporting complexity.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"><i class="fa-solid fa-hotel"></i></div>
+                        <h4>Hospitality</h4>
+                        <p>Accounting, taxation and financial guidance for hotels, restaurants and related businesses.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up">
+                        <div class="icon-box"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <h4>Retail</h4>
+                        <p>Business support for stores and retail operations needing structured finance and compliance help.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h4>Information Technology</h4>
+                        <p>Accounting and advisory support for technology companies and service businesses.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card-page" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h4>Education</h4>
+                        <p>Financial and compliance support for schools, colleges and educational institutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed support -->
+    <section class="section about-section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Industry Approach</span>
+                <h2>We adapt our support to each industry’s requirements</h2>
+                <p>Different sectors have different priorities. We tailor our advice, reporting and compliance support accordingly.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-process-card" data-aos="fade-up">
+                        <div class="industry-process-number">01</div>
+                        <h4>Understand</h4>
+                        <p>We learn how your industry works and what your business needs from us.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-process-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="industry-process-number">02</div>
+                        <h4>Assess</h4>
+                        <p>We review your processes, obligations and current financial position.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-process-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="industry-process-number">03</div>
+                        <h4>Support</h4>
+                        <p>We provide service support in line with your industry’s practical needs.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="industry-process-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="industry-process-number">04</div>
+                        <h4>Improve</h4>
+                        <p>We help you improve compliance and reporting over time with clarity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Bands -->
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <span>Sector Focus</span>
+                <h2>Experience across regulated and operationally active sectors</h2>
+                <p>We work with clients that need both routine support and industry-specific understanding.</p>
+            </div>
+
+            <div class="industry-highlight-band">
+                <div class="row text-center g-4">
+                    <div class="col-md-4">
+                        <div class="industry-highlight-item" data-aos="zoom-in">
+                            <h3>Regulated</h3>
+                            <p>Banking, insurance and compliance-led work</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="industry-highlight-item" data-aos="zoom-in" data-aos-delay="100">
+                            <h3>Operational</h3>
+                            <p>Manufacturing, logistics and retail support</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="industry-highlight-item" data-aos="zoom-in" data-aos-delay="200">
+                            <h3>Institutional</h3>
+                            <p>Co-operative societies and educational bodies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-heading">
+                <span>FAQ</span>
+                <h2>Common questions about industry experience</h2>
+                <p>Quick answers about sectors we support and how we work with them.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion premium-accordion" id="industryFaq">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#industryFaq1">
+                                    Do you work with co-operative societies?
+                                </button>
+                            </h2>
+                            <div id="industryFaq1" class="accordion-collapse collapse show" data-bs-parent="#industryFaq">
+                                <div class="accordion-body">
+                                    Yes. Co-operative society work is one of the important sectors we serve.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#industryFaq2">
+                                    Can you support banking-related audit work?
+                                </button>
+                            </h2>
+                            <div id="industryFaq2" class="accordion-collapse collapse" data-bs-parent="#industryFaq">
+                                <div class="accordion-body">
+                                    Yes. We have experience in bank branch audit and related compliance support.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#industryFaq3">
+                                    Do you work with education and hospitality businesses?
+                                </button>
+                            </h2>
+                            <div id="industryFaq3" class="accordion-collapse collapse" data-bs-parent="#industryFaq">
+                                <div class="accordion-body">
+                                    Yes. We support educational institutions and hospitality-related businesses as well.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-note mt-4" data-aos="fade-up">
+                        <strong>Looking for industry-specific support?</strong>
+                        <p class="mt-2 mb-0">
+                            Share your sector and business need, and we will guide you on the right support approach.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+   <section class="cta-section">
+
+    <div class="container-fluid px-5">
+
+        <div class="cta-box">
+
+            <div class="cta-content">
+                    <h2>
+                        Need Support for Your
+                        <br>
+                        Industry or Sector?
+                    </h2>
+                    <p>
+                        Connect with S M Takalkar & Associates for financial, tax, audit and advisory support
+                        tailored to your business environment.
+                    </p>
+
+                    <div class="cta-features">
+                        <span><i class="fa-solid fa-circle-check"></i>Banking & Insurance</span>
+                        <span><i class="fa-solid fa-circle-check"></i>Manufacturing & Retail</span>
+                        <span><i class="fa-solid fa-circle-check"></i>Education & Co-op</span>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <button type="button" class="cta-btn border-0" data-bs-toggle="modal" data-bs-target="#consultationModal">
+    Book Consultation
+</button>
+                        <a href="tel:+918007237370" class="cta-btn-outline">Call Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="footer-logo">SM<span>.</span>TAKALKAR</h3>
+                    <p class="footer-text">
+                        S M Takalkar & Associates is a trusted Chartered Accountancy firm providing Audit,
+                        Taxation, Accounting, GST, Financial Advisory and Business Consulting services with professionalism and integrity.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services/taxation.html">Taxation</a></li>
+                        <li><a href="services/audit.html">Audit</a></li>
+                        <li><a href="services/accounting.html">Accounting</a></li>
+                        <li><a href="services/advisory.html">Financial Advisory</a></li>
+                        <li><a href="services/consulting.html">Business Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone"></i> +91 8007237370</li>
+                        <li><i class="fa-solid fa-envelope"></i> casumittakalkar@gmail.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Bhosari, Pune</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+             <div class="copyright d-flex justify-content-between flex-wrap gap-3 align-items-center">
+                <p class="mb-0">© 2026 S M Takalkar & Associates. All Rights Reserved.</p>
+                <div>
+                    <a href="privacy-policy.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="terms.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Terms & Conditions</a>
+                    <a href="disclaimer.html" class="text-white text-decoration-none me-3" style="font-size: 0.9rem;">Disclaimer</a>
+                    <a href="sitemap.html" class="text-white text-decoration-none" style="font-size: 0.9rem;">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <a href="https://wa.me/918007237370" class="whatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- Enhanced Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content border-0 rounded-4 shadow-xl overflow-hidden">
+            <div class="row g-0">
+                
+                <!-- Left Info Panel (Hidden on Small Mobile) -->
+                <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-between p-5 text-white position-relative" style="background: linear-gradient(145deg, #0a2342, #163660);">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: radial-gradient(circle at 20% 20%, #2554d8 0%, transparent 80%); pointer-events: none;"></div>
+                    
+                    <div class="position-relative z-1">
+                        <span class="text-uppercase tracking-wider fw-bold text-accent small d-block mb-2" style="color: #cbd5e1; letter-spacing: 1.5px;">S M Takalkar & Associates</span>
+                        <h3 class="fw-bold lh-base mb-4">Let's Secure Your Financial Strategy</h3>
+                        <p class="text-white-50 font-medium">Partner with expert Chartered Accountants to streamline your taxation, corporate compliance, and advisory goals.</p>
+                    </div>
+
+                    <div class="position-relative z-1 my-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-clock text-warning"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Response Window</small>
+                                <span class="fw-semibold">Within 24 Business Hours</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
+                                <i class="fa-solid fa-shield-halved text-success"></i>
+                            </div>
+                            <div>
+                                <small class="text-white-50 d-block">Data Security</small>
+                                <span class="fw-semibold">100% Secure & Confidential</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="position-relative z-1 pt-3 border-top border-white border-opacity-10">
+                        <small class="text-white-50 d-block">Direct Office Support</small>
+                        <a href="tel:+918007237370" class="text-white text-decoration-none fw-bold fs-5">+91 80072 37370</a>
+                    </div>
+                </div>
+
+                <!-- Right Form Panel -->
+                <div class="col-lg-8 bg-white p-4 p-md-5 position-relative">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div>
+                            <h4 class="fw-bold text-dark mb-1" id="consultationModalLabel">
+                                <i class="fa-solid fa-calendar-check me-2 text-primary d-lg-none"></i>Book Consultation
+                            </h4>
+                            <p class="text-muted small mb-0">Provide details below to setup an appointment with our corporate team.</p>
+                        </div>
+                        <button type="button" class="btn-close p-2 custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form action="contact.php" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control premium-input" placeholder="e.g., Rajesh Kumar" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control premium-input" placeholder="e.g., name@company.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" name="phone" class="form-control premium-input" placeholder="10-digit mobile number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold text-secondary small">Company Name</label>
+                                <input type="text" name="company" class="form-control premium-input" placeholder="Registered business name (Optional)">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Practice Area / Service Required <span class="text-danger">*</span></label>
+                                <select name="service" class="form-select premium-input" required>
+                                    <option value="" selected disabled>Choose a service area...</option>
+                                    <option value="taxation">Taxation & GST Compliance</option>
+                                    <option value="audit">Audit & Assurance</option>
+                                    <option value="accounting">Corporate Accounting Services</option>
+                                    <option value="advisory">Financial Advisory & Planning</option>
+                                    <option value="consulting">Business Consulting</option>
+                                    <option value="registration">Company / Firm Registration</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold text-secondary small">Brief Briefing of Requirements <span class="text-danger">*</span></label>
+                                <textarea name="message" class="form-control premium-input" rows="4" placeholder="Describe the current scope or financial challenges your organization is facing..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4 pt-2">
+                                <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold shadow-md premium-btn-submit">
+                                    Request Appointment <i class="fa-solid fa-arrow-right-long ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
