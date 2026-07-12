@@ -414,24 +414,17 @@
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="services.html" >Services</a>
-                            <!-- <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="services/taxation.html">Taxation</a></li>
-                                <li><a class="dropdown-item" href="services/audit.html">Audit</a></li>
-                                <li><a class="dropdown-item" href="services/accounting.html">Accounting</a></li>
-                                <li><a class="dropdown-item" href="services/advisory.html">Financial Advisory</a></li>
-                                <li><a class="dropdown-item" href="services/consulting.html">Business Consulting</a></li>
-                                <li><a class="dropdown-item" href="services/registration.html">Company Registration</a></li>
-                            </ul> -->
+                            <a class="nav-link" href="services.html" >Services</a>             
                         </li>
                         <li class="nav-item"><a class="nav-link" href="industries.html">Industries</a></li>
                         <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Insights</a></li>
                         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                        <!-- Replace the existing <button> with this link -->
                         <li class="nav-item ms-lg-3">
-                        <button type="button" class="btn-consult border-0" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Consultation</button>
-                    </li>
+                            <a href="#contact-form" class="btn-consult text-decoration-none d-inline-block text-center border-0">Book Consultation</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -720,107 +713,5 @@
             }
         });
     </script>
-    <!-- Enhanced Consultation Modal -->
-<div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content border-0 rounded-4 shadow-xl overflow-hidden">
-            <div class="row g-0">
-                
-                <!-- Left Info Panel (Hidden on Small Mobile) -->
-                <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-between p-5 text-white position-relative" style="background: linear-gradient(145deg, #0a2342, #163660);">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: radial-gradient(circle at 20% 20%, #2554d8 0%, transparent 80%); pointer-events: none;"></div>
-                    
-                    <div class="position-relative z-1">
-                        <span class="text-uppercase tracking-wider fw-bold text-accent small d-block mb-2" style="color: #cbd5e1; letter-spacing: 1.5px;">S M Takalkar & Associates</span>
-                        <h3 class="fw-bold lh-base mb-4">Let's Secure Your Financial Strategy</h3>
-                        <p class="text-white-50 font-medium">Partner with expert Chartered Accountants to streamline your taxation, corporate compliance, and advisory goals.</p>
-                    </div>
-
-                    <div class="position-relative z-1 my-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
-                                <i class="fa-solid fa-clock text-warning"></i>
-                            </div>
-                            <div>
-                                <small class="text-white-50 d-block">Response Window</small>
-                                <span class="fw-semibold">Within 24 Business Hours</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="d-flex align-items-center justify-content-center bg-white bg-opacity-10 rounded-3 p-2 me-3" style="width: 40px; height: 40px;">
-                                <i class="fa-solid fa-shield-halved text-success"></i>
-                            </div>
-                            <div>
-                                <small class="text-white-50 d-block">Data Security</small>
-                                <span class="fw-semibold">100% Secure & Confidential</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="position-relative z-1 pt-3 border-top border-white border-opacity-10">
-                        <small class="text-white-50 d-block">Direct Office Support</small>
-                        <a href="tel:+918007237370" class="text-white text-decoration-none fw-bold fs-5">+91 80072 37370</a>
-                    </div>
-                </div>
-
-                <!-- Right Form Panel -->
-                <div class="col-lg-8 bg-white p-4 p-md-5 position-relative">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <div>
-                            <h4 class="fw-bold text-dark mb-1" id="consultationModalLabel">
-                                <i class="fa-solid fa-calendar-check me-2 text-primary d-lg-none"></i>Book Consultation
-                            </h4>
-                            <p class="text-muted small mb-0">Provide details below to setup an appointment with our corporate team.</p>
-                        </div>
-                        <button type="button" class="btn-close p-2 custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <form action="contact.php" method="POST">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label fw-semibold text-secondary small">Full Name <span class="text-danger">*</span></label>
-                                <input type="text" name="name" class="form-control premium-input" placeholder="e.g., Rajesh Kumar" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label fw-semibold text-secondary small">Email Address <span class="text-danger">*</span></label>
-                                <input type="email" name="email" class="form-control premium-input" placeholder="e.g., name@company.com" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label fw-semibold text-secondary small">Phone Number <span class="text-danger">*</span></label>
-                                <input type="tel" name="phone" class="form-control premium-input" placeholder="10-digit mobile number" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label fw-semibold text-secondary small">Company Name</label>
-                                <input type="text" name="company" class="form-control premium-input" placeholder="Registered business name (Optional)">
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label fw-semibold text-secondary small">Practice Area / Service Required <span class="text-danger">*</span></label>
-                                <select name="service" class="form-select premium-input" required>
-                                    <option value="" selected disabled>Choose a service area...</option>
-                                    <option value="taxation">Taxation & GST Compliance</option>
-                                    <option value="audit">Audit & Assurance</option>
-                                    <option value="accounting">Corporate Accounting Services</option>
-                                    <option value="advisory">Financial Advisory & Planning</option>
-                                    <option value="consulting">Business Consulting</option>
-                                    <option value="registration">Company / Firm Registration</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label fw-semibold text-secondary small">Brief Briefing of Requirements <span class="text-danger">*</span></label>
-                                <textarea name="message" class="form-control premium-input" rows="4" placeholder="Describe the current scope or financial challenges your organization is facing..." required></textarea>
-                            </div>
-                            <div class="col-12 mt-4 pt-2">
-                                <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold shadow-md premium-btn-submit">
-                                    Request Appointment <i class="fa-solid fa-arrow-right-long ms-2"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 </html>
