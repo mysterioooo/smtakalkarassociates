@@ -952,7 +952,7 @@
 
                 <!-- Replace the existing Contact form block in your 1st code with this: -->
 <div class="col-lg-7">
-    <form class="contact-form" action="contact.php" method="POST">
+    <form id="contactSectionForm" class="contact-form" novalidate>
         <div class="row g-3">
             <div class="col-md-6">
                 <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -1133,7 +1133,7 @@
                         <button type="button" class="btn-close p-2 custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
-                    <form action="contact.php" method="POST">
+                    <form id="modalConsultationForm" novalidate>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="form-label fw-semibold text-secondary small">Full Name <span class="text-danger">*</span></label>
@@ -1168,7 +1168,7 @@
                                 <textarea name="message" class="form-control premium-input" rows="4" placeholder="Describe the current scope or financial challenges your organization is facing..." required></textarea>
                             </div>
                             <div class="col-12 mt-4 pt-2">
-                                <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold shadow-md premium-btn-submit">
+                                <button type="submit" class="btn-consult text-dark w-100 py-3 rounded-3 fw-bold shadow-md">
                                     Request Appointment <i class="fa-solid fa-arrow-right-long ms-2"></i>
                                 </button>
                             </div>
@@ -1179,6 +1179,6 @@
             </div>
         </div>
     </div>
-</div>
+<script src="assets/js/wa-form-handler.js"></script>
 </body>
 </html>

@@ -250,7 +250,7 @@
                             <a class="nav-link" href="../about.html">About</a>
                         </li>
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="services.html" >Services</a>
+                           <a class="nav-link dropdown-toggle" href="../services.html" >Services</a>
                             <!-- <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="taxation.html">Taxation</a></li>
                                 <li><a class="dropdown-item" href="audit.html">Audit</a></li>
@@ -788,7 +788,7 @@
                         <button type="button" class="btn-close p-2 custom-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
-                    <form action="contact.php" method="POST">
+                    <form id="modalConsultationForm" novalidate>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="form-label fw-semibold text-secondary small">Full Name <span class="text-danger">*</span></label>
@@ -823,7 +823,7 @@
                                 <textarea name="message" class="form-control premium-input" rows="4" placeholder="Describe the current scope or financial challenges your organization is facing..." required></textarea>
                             </div>
                             <div class="col-12 mt-4 pt-2">
-                                <button type="submit" class="btn w-100 py-3 rounded-3 fw-bold shadow-md premium-btn-submit">
+                                <button type="submit" class="btn-consult text-dark w-100 py-3 rounded-3 fw-bold shadow-md">
                                     Request Appointment <i class="fa-solid fa-arrow-right-long ms-2"></i>
                                 </button>
                             </div>
@@ -835,5 +835,6 @@
         </div>
     </div>
 </div>
+<script src="../assets/js/wa-form-handler.js"></script>
 </body>
 </html>

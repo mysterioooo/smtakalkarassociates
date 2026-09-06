@@ -513,7 +513,7 @@
                             }
                         </script>
 
-                        <form action="contact.php" method="POST">
+                        <form id="contactSectionForm" novalidate>
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <label class="form-label">Full Name</label>
@@ -713,5 +713,7 @@
             }
         });
     </script>
+    <!-- WhatsApp form handlers: attach submit listeners to both forms and open wa.me with encoded message -->
+    <script src="assets/js/wa-form-handler.js"></script>
 </body>
 </html>
