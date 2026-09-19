@@ -3,9 +3,9 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // 1. Configure your email settings
-    // For GoDaddy, using a matching domain email (e.g., info@smtakalkarassociates.com) prevents spam filtering
+    // For GoDaddy, using a matching domain email (e.g., info@casumittakalkar.com) prevents spam filtering
     $to_email = "casumittakalkar@gmail.com"; 
-    $from_email = "no-reply@smtakalkarassociates.com"; // Replace with your domain's professional email address
+    $from_email = "no-reply@casumittakalkar.com"; // Replace with your domain's professional email address
     
     // 2. Sanitize and collect form data
     $name    = strip_tags(trim($_POST["name"] ?? ''));

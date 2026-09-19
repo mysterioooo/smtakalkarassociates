@@ -4,9 +4,9 @@
       "@context": "https://schema.org",
       "@type": "AccountingService",
       "name": "S M Takalkar & Associates",
-      "image": "https://smtakalkarassociates.com/assets/images/og-cover.jpg",
-      "@id": "https://smtakalkarassociates.com/#website",
-      "url": "https://smtakalkarassociates.com/index.html",
+      "image": "https://casumittakalkar.com/assets/images/og-cover.jpg",
+      "@id": "https://casumittakalkar.com/#website",
+      "url": "https://casumittakalkar.com/index.html",
       "telephone": "+918007237370",
       "priceRange": "$$",
       "address": {
